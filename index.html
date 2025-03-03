@@ -26,6 +26,20 @@
                 cardContainer.appendChild(card);
             });
         }
+        document.getElementById('add-friend').addEventListener('click', () => {
+            const newFriend = prompt("Enter the name of your friend:");
+            if (newFriend) {
+                friends.push(newFriend);
+                renderCards();
+            }
+        });
+
+        document.getElementById('remove-friend').addEventListener('click', () => {
+            friends.pop(); 
+            renderCards();
+        });
+
+        renderCards();
     </script>
 </body>
 </html>
